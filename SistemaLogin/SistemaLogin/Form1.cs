@@ -21,7 +21,6 @@ namespace SistemaLogin
         {
             FormLogin f = new FormLogin();
             f.ShowDialog();
-            Console.WriteLine("TESTE GERAL");
         }
     }
 }
