@@ -75,5 +75,56 @@ namespace Colecoes
                 lista.Items.Add(nome);
             }
         }
+
+        private void btnHashSet_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+            HashSet<string> veiculos = new HashSet<string>()
+            {
+                "Carro", "Moto", "Avião", "Helicoptero", "Barco"
+            };
+
+            //MessageBox.Show(veiculos.ElementAt(2));
+
+            //if (veiculos.Add(txtValor.Text))
+            //{
+            //    MessageBox.Show("Item adicionado");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Item não adicionado");
+            //}
+
+            //if (veiculos.Contains(txtValor.Text))
+            //{
+            //    MessageBox.Show("Item " + txtValor.Text + " contem na lista");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Item " + txtValor.Text + " não contem na lista");
+            //}
+
+            //if (veiculos.Remove(txtValor.Text)) 
+            //{
+            //    MessageBox.Show("Item " + txtValor.Text + " removido na lista");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Item " + txtValor.Text + " não foi removido na lista");
+            //}
+
+            //MessageBox.Show("A lista contem " + veiculos.Count() + " itens.");
+
+            //veiculos.Clear();
+
+            //txtValor.Text = veiculos.First();
+
+            //txtValor.Text = veiculos.Last();
+
+            foreach (string item in veiculos)
+            {
+                lista.Items.Add(item);
+            }
+        }
     }
 }

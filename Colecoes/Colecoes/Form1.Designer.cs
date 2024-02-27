@@ -30,6 +30,8 @@
         {
             this.lista = new System.Windows.Forms.ListBox();
             this.btnList = new System.Windows.Forms.Button();
+            this.btnHashSet = new System.Windows.Forms.Button();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lista
@@ -53,17 +55,38 @@
             this.btnList.UseVisualStyleBackColor = true;
             this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
+            // btnHashSet
+            // 
+            this.btnHashSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHashSet.Location = new System.Drawing.Point(681, 80);
+            this.btnHashSet.Name = "btnHashSet";
+            this.btnHashSet.Size = new System.Drawing.Size(164, 61);
+            this.btnHashSet.TabIndex = 2;
+            this.btnHashSet.Text = "HashSet";
+            this.btnHashSet.UseVisualStyleBackColor = true;
+            this.btnHashSet.Click += new System.EventHandler(this.btnHashSet_Click);
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(682, 148);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(163, 20);
+            this.txtValor.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 498);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.btnHashSet);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.lista);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listas Genéricas";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -71,6 +94,8 @@
 
         private System.Windows.Forms.ListBox lista;
         private System.Windows.Forms.Button btnList;
+        private System.Windows.Forms.Button btnHashSet;
+        private System.Windows.Forms.TextBox txtValor;
     }
 }
 
