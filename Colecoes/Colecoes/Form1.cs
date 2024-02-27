@@ -19,6 +19,7 @@ namespace Colecoes
 
         private void btnList_Click(object sender, EventArgs e)
         {
+            lista.Items.Clear();
             // Array
             string[] nomes = new string[3];
             nomes[0] = "Luciano";
@@ -30,6 +31,39 @@ namespace Colecoes
             nomes2.AddRange(nomes);
             nomes2.Add("Lucas");
             nomes2.Add("Princesa");
+
+            //if (nomes2.Remove("Lucas"))
+            //{
+            //    MessageBox.Show("Lucas removido!");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Não foi possível remover Lucas da lista!");
+            //}
+
+            //if (nomes2.Contains("Lilian"))
+            //{
+            //    MessageBox.Show("Lilian esta na lista!");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Lilian não esta na lista!");
+            //}
+
+            //int quantidade = nomes2.Count;
+            //MessageBox.Show("A lista contem " + quantidade + " elementos.");
+            //nomes2.Sort();
+
+            //MessageBox.Show("Lilian esta no indice " + nomes2.IndexOf("Lilian"));
+            //MessageBox.Show("João esta no indice " + nomes2.IndexOf("João"));
+
+            //nomes2.Insert(2, "João");
+
+            //nomes2.RemoveAt(1);
+
+            //nomes2.Clear();
+
+            //nomes2.Add("Lucas");
 
             //lista.Items.Add(nomes2[0]);
             //lista.Items.Add(nomes2[1]);
