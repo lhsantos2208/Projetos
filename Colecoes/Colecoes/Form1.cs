@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -125,6 +126,26 @@ namespace Colecoes
             {
                 lista.Items.Add(item);
             }
+        }
+
+        private void btnDictionary_Click(object sender, EventArgs e)
+        {
+            Dictionary<int, string> alunos = new Dictionary<int, string>()
+            {
+                { 150, "Lilian" },
+                { 200, "Luana" },
+                { 250, "Lucas" }
+            };
+
+            alunos.Add(100, "Luciano");
+
+            foreach (KeyValuePair<int, string> item in alunos)
+            {
+                lista.Items.Add(item.Key + " = " + item.Value);
+            }
+
+            // txtValor.Text = "Quantidade de alunos: " + alunos.Count.ToString();
+            txtValor.Text = "Removido o aluno: " + alunos.Count.ToString();
         }
     }
 }
