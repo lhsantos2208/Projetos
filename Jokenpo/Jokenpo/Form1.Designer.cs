@@ -40,9 +40,14 @@
             this.btnPedra = new System.Windows.Forms.Button();
             this.btnPapel = new System.Windows.Forms.Button();
             this.btnTesoura = new System.Windows.Forms.Button();
+            this.lbVitUsu = new System.Windows.Forms.Label();
+            this.lbVitPC = new System.Windows.Forms.Label();
+            this.lbEmpatar = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picResultado)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1Titulo
@@ -87,7 +92,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(82, 199);
+            this.label1.Location = new System.Drawing.Point(82, 259);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 25);
             this.label1.TabIndex = 4;
@@ -98,7 +103,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(378, 199);
+            this.label2.Location = new System.Drawing.Point(378, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 25);
             this.label2.TabIndex = 5;
@@ -170,11 +175,58 @@
             this.btnTesoura.UseVisualStyleBackColor = true;
             this.btnTesoura.Click += new System.EventHandler(this.btnTesoura_Click);
             // 
+            // lbVitUsu
+            // 
+            this.lbVitUsu.AutoSize = true;
+            this.lbVitUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVitUsu.ForeColor = System.Drawing.Color.Lime;
+            this.lbVitUsu.Location = new System.Drawing.Point(6, 30);
+            this.lbVitUsu.Name = "lbVitUsu";
+            this.lbVitUsu.Size = new System.Drawing.Size(172, 20);
+            this.lbVitUsu.TabIndex = 12;
+            this.lbVitUsu.Text = "Vitórias do Usuário: ";
+            // 
+            // lbVitPC
+            // 
+            this.lbVitPC.AutoSize = true;
+            this.lbVitPC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVitPC.ForeColor = System.Drawing.Color.Red;
+            this.lbVitPC.Location = new System.Drawing.Point(280, 30);
+            this.lbVitPC.Name = "lbVitPC";
+            this.lbVitPC.Size = new System.Drawing.Size(133, 20);
+            this.lbVitPC.TabIndex = 13;
+            this.lbVitPC.Text = "Vitórias do PC: ";
+            // 
+            // lbEmpatar
+            // 
+            this.lbEmpatar.AutoSize = true;
+            this.lbEmpatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmpatar.ForeColor = System.Drawing.Color.Blue;
+            this.lbEmpatar.Location = new System.Drawing.Point(543, 30);
+            this.lbEmpatar.Name = "lbEmpatar";
+            this.lbEmpatar.Size = new System.Drawing.Size(85, 20);
+            this.lbEmpatar.TabIndex = 14;
+            this.lbEmpatar.Text = "Empates:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbVitUsu);
+            this.groupBox1.Controls.Add(this.lbEmpatar);
+            this.groupBox1.Controls.Add(this.lbVitPC);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(20, 529);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(747, 75);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Placar do Jogo";
+            // 
             // frmJokenpo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 561);
+            this.ClientSize = new System.Drawing.Size(800, 624);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnTesoura);
             this.Controls.Add(this.btnPapel);
             this.Controls.Add(this.btnPedra);
@@ -194,6 +246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picResultado)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,6 +267,10 @@
         private System.Windows.Forms.Button btnPedra;
         private System.Windows.Forms.Button btnPapel;
         private System.Windows.Forms.Button btnTesoura;
+        private System.Windows.Forms.Label lbVitUsu;
+        private System.Windows.Forms.Label lbVitPC;
+        private System.Windows.Forms.Label lbEmpatar;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

@@ -12,6 +12,10 @@ namespace Jokenpo
 {
     public partial class frmJokenpo : Form
     {
+        int nemp = 0;
+        int ngan = 0;
+        int nper = 0;
+
         public frmJokenpo()
         {
             InitializeComponent();
@@ -36,16 +40,22 @@ namespace Jokenpo
         {
             labelResultado.Visible = false; 
             Game jogo = new Game();
-
+            
             switch (jogo.Jogar(opcao))
             {
                 case Game.Resultado.Ganhar:
+                    ngan ++;
+                    lbVitUsu.Text = "Vitórias do Usuário: " + ngan;
                     picResultado.BackgroundImage = Image.FromFile("imagens/Ganhar.png");
                     goto default;
                 case Game.Resultado.Perder:
+                    nper ++;
+                    lbVitPC.Text = "Vitórias do PC: " + nper;
                     picResultado.BackgroundImage = Image.FromFile("imagens/Perder.png");
                     goto default; 
                 case Game.Resultado.Empatar:
+                    nemp ++;
+                    lbEmpatar.Text = "Empates:" + nemp; 
                     picResultado.BackgroundImage = Image.FromFile("imagens/Empatar.png");
                     goto default; 
                 default:

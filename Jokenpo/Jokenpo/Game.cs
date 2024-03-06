@@ -27,7 +27,7 @@ namespace Jokenpo
         public Resultado Jogar(int jogador)
         {
             int pc = JogadaPC();
-
+            
             ImgJogador = images[jogador];
             ImgPC = images[pc];
 
