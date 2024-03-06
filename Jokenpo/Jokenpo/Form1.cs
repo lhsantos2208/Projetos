@@ -31,5 +31,28 @@ namespace Jokenpo
         {
 
         }
+
+        private void StartGame(int opcao)
+        {
+            labelResultado.Visible = false; 
+            Game jogo = new Game();
+
+            switch (jogo.Jogar(opcao))
+            {
+                case Game.Resultado.Ganhar:
+                    picResultado.BackgroundImage = Image.FromFile("imagens/Ganhar.png");
+                    break;
+                case Game.Resultado.Perder:
+                    picResultado.BackgroundImage = Image.FromFile("imagens/Perder.png");
+                    break;
+                case Game.Resultado.Empatar:
+                    picResultado.BackgroundImage = Image.FromFile("imagens/Empatar.png");
+                    break;
+                default:
+                    pictureBox1.Image = 
+                    break;
+
+            }
+        }
     }
 }
