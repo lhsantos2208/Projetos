@@ -19,17 +19,17 @@ namespace Jokenpo
 
         private void btnPedra_Click(object sender, EventArgs e)
         {
-
+            StartGame(0);
         }
 
         private void btnPapel_Click(object sender, EventArgs e)
         {
-
+            StartGame(2);
         }
 
         private void btnTesoura_Click(object sender, EventArgs e)
         {
-
+            StartGame(1);
         }
 
         private void StartGame(int opcao)
@@ -41,17 +41,17 @@ namespace Jokenpo
             {
                 case Game.Resultado.Ganhar:
                     picResultado.BackgroundImage = Image.FromFile("imagens/Ganhar.png");
-                    break;
+                    goto default;
                 case Game.Resultado.Perder:
                     picResultado.BackgroundImage = Image.FromFile("imagens/Perder.png");
-                    break;
+                    goto default; 
                 case Game.Resultado.Empatar:
                     picResultado.BackgroundImage = Image.FromFile("imagens/Empatar.png");
-                    break;
+                    goto default; 
                 default:
-                    pictureBox1.Image = 
+                    pictureBox1.Image = jogo.ImgJogador;
+                    pictureBox2.Image = jogo.ImgPC;
                     break;
-
             }
         }
     }
