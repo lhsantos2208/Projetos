@@ -186,5 +186,116 @@ namespace Colecoes
             }
             txtValor.Text = "A lista contem " + alunos.Count() + " alunos.";
         }
+
+        private void btnSortedDictionary_Click(object sender, EventArgs e)
+        {
+            SortedDictionary<int, string> alunos = new SortedDictionary<int, string>()
+            //SortedDictionary<string, string> alunos = new SortedDictionary<string, string>()
+            {
+                { 4512, "Lilian" },
+                { 1542, "Lucas" },
+                { 2145, "Luana" }
+            };
+
+            alunos.Add(5478, "Luciano");
+
+            //alunos.Remove(5478);
+            //alunos.Count();
+            //alunos.Clear();
+            //alunos.ContainsKey(4512);
+            //alunos.ContainsValue("Lilian");
+            txtValor.Text = "A lista contem o indice " + alunos.ElementAt(0).ToString();
+
+            //foreach (KeyValuePair<int, string> item in alunos.Reverse())
+            foreach (KeyValuePair<int, string> item in alunos)
+            {
+                lista.Items.Add(item.Key + " " + item.Value);
+            }
+        }
+
+        private void btnSortedSet_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+            SortedSet<string> nomes = new SortedSet<string>()
+            {
+                { "Luciano" },
+                { "Lilian" },
+                { "Luana" }
+            };
+
+            nomes.Add("Lucas");
+
+            //nomes.Remove("Luana");
+            //txtValor.Text = nomes.ElementAt(0);
+            //txtValor.Text = nomes.First();
+            //txtValor.Text = nomes.Last();
+            //nomes.Contains("Lilian");
+            txtValor.Text = nomes.Count().ToString();
+            //nomes.Clear();
+
+            //foreach(string nome in nomes.Reverse())
+            foreach (string nome in nomes)
+            {
+                lista.Items.Add(nome);
+            }
+        }
+
+        private void btnQueue_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+            Queue<string> fila = new Queue<string>();
+            fila.Enqueue("Luciano");
+            fila.Enqueue("Lilian");
+            fila.Enqueue("Luana");
+
+            //txtValor.Text = fila.Count.ToString();
+
+            foreach(string item in fila)
+            {
+                lista.Items.Add(item);
+            }
+
+            //txtValor.Text = "O primeiro da fila é: " + fila.Peek();
+            //txtValor.Text = "O primeiro da fila a ser removido é: " + fila.Dequeue();
+            txtValor.Text = "O último elemento da fila é: " + fila.Last();
+            //fila.Clear();
+            //lista.Items.Clear();
+            //foreach (string item in fila)
+            //{
+            //    lista.Items.Add(item);
+            //}
+        }
+
+        private void btnStack_Click(object sender, EventArgs e)
+        {
+            lista.Items.Clear();
+            Stack<string> pilha = new Stack<string>();
+
+            pilha.Push("Luciano");
+            pilha.Push("Lilian");
+            pilha.Push("Luana");
+            pilha.Push("Lucas");
+
+            txtValor.Text= pilha.Count.ToString();
+
+            foreach(string item in pilha)
+            {
+                lista.Items.Add(item);
+            }
+
+            //txtValor.Text = "Elemento no topo: " + pilha.Peek();
+
+            //pilha.Clear();
+            
+            while (pilha.Count > 0)
+            {
+                txtValor.Text = "O primeiro elemento a ser removido é: " + pilha.Pop();
+                lista.Items.Clear();
+                foreach (string item in pilha)
+                {
+                    lista.Items.Add(item);
+                }
+            }
+        }
     }
 }
