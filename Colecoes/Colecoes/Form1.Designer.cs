@@ -33,6 +33,7 @@
             this.btnHashSet = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.btnDictionary = new System.Windows.Forms.Button();
+            this.btnSortedList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lista
@@ -85,11 +86,23 @@
             this.btnDictionary.UseVisualStyleBackColor = true;
             this.btnDictionary.Click += new System.EventHandler(this.btnDictionary_Click);
             // 
+            // btnSortedList
+            // 
+            this.btnSortedList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSortedList.Location = new System.Drawing.Point(682, 214);
+            this.btnSortedList.Name = "btnSortedList";
+            this.btnSortedList.Size = new System.Drawing.Size(164, 61);
+            this.btnSortedList.TabIndex = 5;
+            this.btnSortedList.Text = "SortedList";
+            this.btnSortedList.UseVisualStyleBackColor = true;
+            this.btnSortedList.Click += new System.EventHandler(this.btnSortedList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 498);
+            this.Controls.Add(this.btnSortedList);
             this.Controls.Add(this.btnDictionary);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.btnHashSet);
@@ -110,6 +123,7 @@
         private System.Windows.Forms.Button btnHashSet;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Button btnDictionary;
+        private System.Windows.Forms.Button btnSortedList;
     }
 }
 

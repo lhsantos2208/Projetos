@@ -139,13 +139,52 @@ namespace Colecoes
 
             alunos.Add(100, "Luciano");
 
+            //alunos.Remove(250);
+            //alunos.Clear();
+            
+            
+
             foreach (KeyValuePair<int, string> item in alunos)
             {
                 lista.Items.Add(item.Key + " = " + item.Value);
             }
 
-            // txtValor.Text = "Quantidade de alunos: " + alunos.Count.ToString();
-            txtValor.Text = "Removido o aluno: " + alunos.Count.ToString();
+            //txtValor.Text = "Quantidade de alunos: " + alunos.Count.ToString();
+            //txtValor.Text = "Primeiro item: " + alunos.First().Value;
+            //txtValor.Text = "Último item: " + alunos.Last().Value;
+            //if (alunos.ContainsKey(800))
+            if (alunos.ContainsValue("Davi"))
+            {
+                txtValor.Text = "Contém o aluno Davi";
+            }
+            else
+            {
+                txtValor.Text = "Não contém o aluno Davi";
+            }
+        }
+
+        private void btnSortedList_Click(object sender, EventArgs e)
+        {
+            SortedList<int, string> alunos = new SortedList<int, string>()
+            {
+                { 27, "Lilian" },
+                { 10, "Lucas" },
+                { 17, "Luana" }
+            };
+
+            alunos.Add(14, "Luciano");
+            //alunos.Remove(10);
+            //alunos.RemoveAt(0);
+            //alunos.ContainsKey(10);
+            //alunos.ContainsValue("Lucas");
+            
+            lista.Items.Clear();
+            //foreach (KeyValuePair<int, string> item in alunos.Reverse())
+            foreach (KeyValuePair<int, string> item in alunos)
+            {
+                lista.Items.Add(item.Key + " " + item.Value);
+            }
+            txtValor.Text = "A lista contem " + alunos.Count() + " alunos.";
         }
     }
 }
