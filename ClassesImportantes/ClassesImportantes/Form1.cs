@@ -128,5 +128,43 @@ namespace ClassesImportantes
             lblResultado.Text = "Bem vindo ao C#, Trabalho com fontes";
             lblResultado.Font = letra;
         }
+
+        private void btnEnvironment_Click(object sender, EventArgs e)
+        {
+            string meusDocs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            //Environment.CurrentDirectory = "C:\\";
+            //string dirAtual = Environment.CurrentDirectory;
+            //Environment.NewLine;
+            //string varAmb = Environment.GetEnvironmentVariable("Path");
+
+            //string[] discos = Environment.GetLogicalDrives();
+
+            //foreach (string item in discos) 
+            //{
+            //    lblResultado.Text += "\n" + item;
+            //}
+
+            string user = Environment.UserName;
+            string domain = Environment.UserDomainName;
+            int cpu = Environment.ProcessorCount;
+
+            lblResultado.Text = cpu.ToString();
+
+
+        }
+
+        private void btnApplication_Click(object sender, EventArgs e)
+        {
+            //Application.Exit();
+
+            string exec = Application.ExecutablePath;
+
+            string pasta = Application.StartupPath;
+
+            Application.Restart();
+
+            lblResultado.Text = pasta;
+        }
     }
 }

@@ -35,6 +35,8 @@
             this.btnDateTime = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
             this.brnFont = new System.Windows.Forms.Button();
+            this.btnEnvironment = new System.Windows.Forms.Button();
+            this.btnApplication = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMessageBox
@@ -53,7 +55,7 @@
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.Location = new System.Drawing.Point(13, 13);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(775, 97);
+            this.lblResultado.Size = new System.Drawing.Size(775, 359);
             this.lblResultado.TabIndex = 1;
             this.lblResultado.Text = "label1";
             // 
@@ -112,11 +114,35 @@
             this.brnFont.UseVisualStyleBackColor = true;
             this.brnFont.Click += new System.EventHandler(this.brnFont_Click);
             // 
+            // btnEnvironment
+            // 
+            this.btnEnvironment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnvironment.Location = new System.Drawing.Point(398, 444);
+            this.btnEnvironment.Name = "btnEnvironment";
+            this.btnEnvironment.Size = new System.Drawing.Size(187, 63);
+            this.btnEnvironment.TabIndex = 7;
+            this.btnEnvironment.Text = "Environment";
+            this.btnEnvironment.UseVisualStyleBackColor = true;
+            this.btnEnvironment.Click += new System.EventHandler(this.btnEnvironment_Click);
+            // 
+            // btnApplication
+            // 
+            this.btnApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplication.Location = new System.Drawing.Point(591, 444);
+            this.btnApplication.Name = "btnApplication";
+            this.btnApplication.Size = new System.Drawing.Size(187, 63);
+            this.btnApplication.TabIndex = 8;
+            this.btnApplication.Text = "Application";
+            this.btnApplication.UseVisualStyleBackColor = true;
+            this.btnApplication.Click += new System.EventHandler(this.btnApplication_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 515);
+            this.Controls.Add(this.btnApplication);
+            this.Controls.Add(this.btnEnvironment);
             this.Controls.Add(this.brnFont);
             this.Controls.Add(this.btnColor);
             this.Controls.Add(this.btnDateTime);
@@ -139,6 +165,8 @@
         private System.Windows.Forms.Button btnDateTime;
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.Button brnFont;
+        private System.Windows.Forms.Button btnEnvironment;
+        private System.Windows.Forms.Button btnApplication;
     }
 }
 
