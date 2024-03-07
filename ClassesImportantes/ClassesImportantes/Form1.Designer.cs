@@ -31,6 +31,8 @@
             this.btnMessageBox = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btAleatorio = new System.Windows.Forms.Button();
+            this.btnTimeSpan = new System.Windows.Forms.Button();
+            this.btnDateTime = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMessageBox
@@ -64,11 +66,35 @@
             this.btAleatorio.UseVisualStyleBackColor = true;
             this.btAleatorio.Click += new System.EventHandler(this.btAleatorio_Click);
             // 
+            // btnTimeSpan
+            // 
+            this.btnTimeSpan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimeSpan.Location = new System.Drawing.Point(398, 375);
+            this.btnTimeSpan.Name = "btnTimeSpan";
+            this.btnTimeSpan.Size = new System.Drawing.Size(187, 63);
+            this.btnTimeSpan.TabIndex = 3;
+            this.btnTimeSpan.Text = "TimeSpan";
+            this.btnTimeSpan.UseVisualStyleBackColor = true;
+            this.btnTimeSpan.Click += new System.EventHandler(this.btnTimeSpan_Click);
+            // 
+            // btnDateTime
+            // 
+            this.btnDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDateTime.Location = new System.Drawing.Point(591, 375);
+            this.btnDateTime.Name = "btnDateTime";
+            this.btnDateTime.Size = new System.Drawing.Size(187, 63);
+            this.btnDateTime.TabIndex = 4;
+            this.btnDateTime.Text = "DateTime";
+            this.btnDateTime.UseVisualStyleBackColor = true;
+            this.btnDateTime.Click += new System.EventHandler(this.btnDateTime_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDateTime);
+            this.Controls.Add(this.btnTimeSpan);
             this.Controls.Add(this.btAleatorio);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnMessageBox);
@@ -83,6 +109,8 @@
         private System.Windows.Forms.Button btnMessageBox;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btAleatorio;
+        private System.Windows.Forms.Button btnTimeSpan;
+        private System.Windows.Forms.Button btnDateTime;
     }
 }
 

@@ -48,5 +48,52 @@ namespace ClassesImportantes
 
             lblResultado.Text = "O número escolhido foi: " + valor2;
         }
+
+        private void btnTimeSpan_Click(object sender, EventArgs e)
+        {
+            //lblResultado.Text = TimeSpan.FromMinutes(90.5).ToString();
+            //lblResultado.Text = TimeSpan.FromDays(7.25).ToString();
+            //lblResultado.Text = TimeSpan.FromTicks(1000000000).ToString();
+            //lblResultado.Text = TimeSpan.TicksPerMinute.ToString();
+            TimeSpan inicio = new TimeSpan(1, 0, 0);
+
+            TimeSpan fim = new TimeSpan(3, 30, 0);
+
+            TimeSpan intervalo = fim - inicio;
+
+            TimeSpan somar = fim + inicio;
+
+            TimeSpan adicao = inicio.Add(fim);
+
+            TimeSpan subtrair = fim.Subtract (inicio);
+
+            //lblResultado.Text = intervalo.TotalHours.ToString();
+            lblResultado.Text = subtrair.ToString();
+        }
+
+        private void btnDateTime_Click(object sender, EventArgs e)
+        {
+            //lblResultado.Text = DateTime.Now.ToString();
+            //lblResultado.Text = DateTime.Today.ToString();
+            //lblResultado.Text = DateTime.DaysInMonth(2024,07).ToString();
+            //lblResultado.Text = DateTime.IsLeapYear(2054).ToString();
+            //lblResultado.Text = DateTime.Now.ToLongDateString();
+            //lblResultado.Text = DateTime.Now.ToShortDateString();
+            //lblResultado.Text = DateTime.Now.ToLongTimeString();
+            //lblResultado.Text = DateTime.Now.ToShortTimeString();
+            //lblResultado.Text = DateTime.Now.ToUniversalTime().ToString();  
+            //lblResultado.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"); 
+
+            DateTime data = new DateTime(1985,01,10,14,35,30);
+
+            //lblResultado.Text =  data.AddYears(2).ToString();
+
+            //TimeSpan tempo = new TimeSpan(5,10,5,20);
+            //lblResultado.Text = data.Add(tempo).ToString();
+
+            //lblResultado.Text = data.DayOfWeek.ToString();
+
+            lblResultado.Text = data.DayOfYear.ToString();
+        }
     }
 }
