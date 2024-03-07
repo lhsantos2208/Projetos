@@ -95,5 +95,38 @@ namespace ClassesImportantes
 
             lblResultado.Text = data.DayOfYear.ToString();
         }
+
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            Color vermelho = Color.Red;
+            Color amarelo = Color.Yellow;
+
+            //Color cor1 = Color.FromArgb(100, Color.DarkGreen);
+            //Color cor1 = Color.FromArgb(255, 100, 50, 135);
+            Color cor1 = Color.FromArgb(100, 50, 135);
+            Color cor2 = Color.FromKnownColor(KnownColor.Control);
+            Color cor3 = Color.FromName("DarkRed");
+
+            //lblResultado.BackColor = vermelho;
+            //lblResultado.BackColor = amarelo;
+            lblResultado.BackColor = cor3;
+            lblResultado.ForeColor = cor2;
+
+            Color cor4 = lblResultado.BackColor;
+
+            btnColor.ForeColor = cor2;
+            btnColor.BackColor = cor4;
+
+        }
+
+        private void brnFont_Click(object sender, EventArgs e)
+        {
+            //Font Letra = new Font("Arial", 36, FontStyle.Italic, GraphicsUnit.Pixel);
+            Font letra = new Font("Helvetica, Arial, sans-serif", 36, FontStyle.Italic | FontStyle.Bold, GraphicsUnit.Pixel);
+            Font letra2 = new Font(FontFamily.GenericMonospace, 36, FontStyle.Regular, GraphicsUnit.Pixel);
+
+            lblResultado.Text = "Bem vindo ao C#, Trabalho com fontes";
+            lblResultado.Font = letra;
+        }
     }
 }

@@ -33,6 +33,8 @@
             this.btAleatorio = new System.Windows.Forms.Button();
             this.btnTimeSpan = new System.Windows.Forms.Button();
             this.btnDateTime = new System.Windows.Forms.Button();
+            this.btnColor = new System.Windows.Forms.Button();
+            this.brnFont = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMessageBox
@@ -88,11 +90,35 @@
             this.btnDateTime.UseVisualStyleBackColor = true;
             this.btnDateTime.Click += new System.EventHandler(this.btnDateTime_Click);
             // 
+            // btnColor
+            // 
+            this.btnColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnColor.Location = new System.Drawing.Point(12, 444);
+            this.btnColor.Name = "btnColor";
+            this.btnColor.Size = new System.Drawing.Size(187, 63);
+            this.btnColor.TabIndex = 5;
+            this.btnColor.Text = "Color";
+            this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
+            // 
+            // brnFont
+            // 
+            this.brnFont.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnFont.Location = new System.Drawing.Point(205, 444);
+            this.brnFont.Name = "brnFont";
+            this.brnFont.Size = new System.Drawing.Size(187, 63);
+            this.brnFont.TabIndex = 6;
+            this.brnFont.Text = "Font";
+            this.brnFont.UseVisualStyleBackColor = true;
+            this.brnFont.Click += new System.EventHandler(this.brnFont_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 515);
+            this.Controls.Add(this.brnFont);
+            this.Controls.Add(this.btnColor);
             this.Controls.Add(this.btnDateTime);
             this.Controls.Add(this.btnTimeSpan);
             this.Controls.Add(this.btAleatorio);
@@ -111,6 +137,8 @@
         private System.Windows.Forms.Button btAleatorio;
         private System.Windows.Forms.Button btnTimeSpan;
         private System.Windows.Forms.Button btnDateTime;
+        private System.Windows.Forms.Button btnColor;
+        private System.Windows.Forms.Button brnFont;
     }
 }
 
