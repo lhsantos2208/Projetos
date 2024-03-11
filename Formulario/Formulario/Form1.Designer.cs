@@ -80,7 +80,8 @@
             // 
             // menuBar
             // 
-            this.menuBar.BackColor = System.Drawing.SystemColors.Control;
+            this.menuBar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuBar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuArquivos,
             this.menuAjuda,
@@ -94,25 +95,34 @@
             // 
             // MenuArquivos
             // 
+            this.MenuArquivos.BackColor = System.Drawing.SystemColors.Info;
             this.MenuArquivos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mArquivoNovo,
             this.mArquivoAbrir,
             this.toolStripSeparator1,
             this.mArquivoSair});
+            this.MenuArquivos.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuArquivos.Name = "MenuArquivos";
-            this.MenuArquivos.Size = new System.Drawing.Size(66, 23);
+            this.MenuArquivos.Size = new System.Drawing.Size(72, 23);
             this.MenuArquivos.Text = "Arquivos";
             // 
             // mArquivoNovo
             // 
+            this.mArquivoNovo.BackColor = System.Drawing.Color.RosyBrown;
+            this.mArquivoNovo.Image = global::Formulario.Properties.Resources.ItemNovo;
             this.mArquivoNovo.Name = "mArquivoNovo";
+            this.mArquivoNovo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.mArquivoNovo.Size = new System.Drawing.Size(180, 22);
             this.mArquivoNovo.Text = "Novo";
             this.mArquivoNovo.Click += new System.EventHandler(this.mArquivoNovo_Click);
             // 
             // mArquivoAbrir
             // 
+            this.mArquivoAbrir.Enabled = false;
+            this.mArquivoAbrir.Font = new System.Drawing.Font("Rockwell", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mArquivoAbrir.Image = global::Formulario.Properties.Resources.ItemAbrir;
             this.mArquivoAbrir.Name = "mArquivoAbrir";
+            this.mArquivoAbrir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.mArquivoAbrir.Size = new System.Drawing.Size(180, 22);
             this.mArquivoAbrir.Text = "Abrir";
             this.mArquivoAbrir.Click += new System.EventHandler(this.mArquivoAbrir_Click);
@@ -124,7 +134,11 @@
             // 
             // mArquivoSair
             // 
+            this.mArquivoSair.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mArquivoSair.ForeColor = System.Drawing.Color.DarkRed;
+            this.mArquivoSair.Image = global::Formulario.Properties.Resources.ItemSair;
             this.mArquivoSair.Name = "mArquivoSair";
+            this.mArquivoSair.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.mArquivoSair.Size = new System.Drawing.Size(180, 22);
             this.mArquivoSair.Text = "Sair";
             this.mArquivoSair.Click += new System.EventHandler(this.mArquivoSair_Click);
@@ -133,6 +147,7 @@
             // 
             this.menuAjuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mAjudaSobre});
+            this.menuAjuda.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuAjuda.Name = "menuAjuda";
             this.menuAjuda.Size = new System.Drawing.Size(50, 23);
             this.menuAjuda.Text = "Ajuda";
