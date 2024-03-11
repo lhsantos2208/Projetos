@@ -43,7 +43,8 @@ namespace ThreadForms
             while (true)
             {
                 //lblResultado.Text = DateTime.Now.Second.ToString();
-                DefinirValorPropriedade(lblResultado, "Text", DateTime.Now.Second.ToString());
+                //    DefinirValorPropriedade(lblResultado, "Text", DateTime.Now.Second.ToString());
+                lblResultado.Invoke(new Action(() => lblResultado.Text = DateTime.Now.Second.ToString())); // Com essa linha não precisa declarar o delegate AtualizarControle e nem utilizar a classe DefinirValorPropriedade
             }
         }
 
