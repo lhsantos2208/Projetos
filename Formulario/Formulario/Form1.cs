@@ -26,9 +26,14 @@ namespace Formulario
         private void btnSegunda_Click(object sender, EventArgs e)
         {
             Hide();
-            FormSegunda f = new FormSegunda();
+            FormSegunda f = new FormSegunda("Bem Vindo.");
             //f.Show();
+            //f.Mensagem = "Segunda form aberta por Luciano";
             f.ShowDialog();
+            if (f.Mensagem != null)
+            {
+                lblPrincipal.Text = f.Mensagem;
+            }
             Show();
         }
 
