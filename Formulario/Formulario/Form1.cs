@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,6 +30,13 @@ namespace Formulario
             //f.Show();
             f.ShowDialog();
             Show();
+        }
+
+        private void btnSegundaFormThread_Click(object sender, EventArgs e)
+        {
+            Close();
+            Thread t = new Thread(() => Application.Run(new FormSegunda()));
+            t.Start();
         }
     }
 }
