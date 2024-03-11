@@ -12,6 +12,9 @@ namespace FormControle
 {
     public partial class Form1 : Form
     {
+        Label label1 = new Label();
+        Button btn1 = new Button();
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +22,6 @@ namespace FormControle
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Label label1 = new Label();
             label1.Location = new Point(10,10);
             label1.AutoSize = false;
             label1.Size = new Size(500,100);
@@ -27,9 +29,26 @@ namespace FormControle
             label1.ForeColor = Color.Black;
             label1.Font = new Font(FontFamily.GenericSansSerif, 28, FontStyle.Bold, GraphicsUnit.Point);
             label1.Text = "Minha Label no Código.";
-            label1.Name = "label1";
+            
+            btn1.Location = new Point(211,378);
+            btn1.Size = new Size(200,60);
+            btn1.Text = "Botão Código";
+            btn1.Font = new Font(FontFamily.GenericSansSerif, 10, FontStyle.Bold, GraphicsUnit.Point);
+            btn1.Click += Btn1_Click;
+            btn1.MouseEnter += Btn1_MouseEnter;
 
             this.Controls.Add(label1);
+            this.Controls.Add(btn1);
+        }
+
+        private void Btn1_MouseEnter(object sender, EventArgs e)
+        {
+            label1.Text = "Passou o mouse sobre o botão";
+        }
+
+        private void Btn1_Click(object sender, EventArgs e)
+        {
+            label1.Text = "Clicou no botão";
         }
     }
 }
