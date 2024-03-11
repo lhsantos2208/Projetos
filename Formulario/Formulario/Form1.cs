@@ -43,5 +43,56 @@ namespace Formulario
             Thread t = new Thread(() => Application.Run(new FormSegunda()));
             t.Start();
         }
+
+        private void mArquivoNovo_Click(object sender, EventArgs e)
+        {
+            new Thread(() => Application.Run(new FormMain())).Start();
+        }
+
+        private void mArquivoAbrir_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormSegunda f = new FormSegunda();
+            f.ShowDialog();
+            Show();
+        }
+
+        private void mArquivoSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void mAjudaSobreDes_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Luciano Henrique");
+        }
+
+        private void mAjudaSobreVer_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Versão 1.0");
+        }
+
+        private void ComboMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ComboMenu.SelectedIndex == 0) 
+            {
+                MenuArquivos.Text = "File";
+                menuAjuda.Text = "Help";
+            }
+            else if (ComboMenu.SelectedIndex == 1)
+            {
+                MenuArquivos.Text = "Arquivos";
+                menuAjuda.Text = "Ajuda";
+            }
+        }
+
+        private void mPesquisar_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                lblPrincipal.Text = mPesquisar.Text;
+                mPesquisar.Clear();
+            }
+        }
     }
 }

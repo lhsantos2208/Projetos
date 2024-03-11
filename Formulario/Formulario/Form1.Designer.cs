@@ -108,12 +108,14 @@
             this.mArquivoNovo.Name = "mArquivoNovo";
             this.mArquivoNovo.Size = new System.Drawing.Size(180, 22);
             this.mArquivoNovo.Text = "Novo";
+            this.mArquivoNovo.Click += new System.EventHandler(this.mArquivoNovo_Click);
             // 
             // mArquivoAbrir
             // 
             this.mArquivoAbrir.Name = "mArquivoAbrir";
             this.mArquivoAbrir.Size = new System.Drawing.Size(180, 22);
             this.mArquivoAbrir.Text = "Abrir";
+            this.mArquivoAbrir.Click += new System.EventHandler(this.mArquivoAbrir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -125,6 +127,7 @@
             this.mArquivoSair.Name = "mArquivoSair";
             this.mArquivoSair.Size = new System.Drawing.Size(180, 22);
             this.mArquivoSair.Text = "Sair";
+            this.mArquivoSair.Click += new System.EventHandler(this.mArquivoSair_Click);
             // 
             // menuAjuda
             // 
@@ -148,12 +151,14 @@
             this.mAjudaSobreDes.Name = "mAjudaSobreDes";
             this.mAjudaSobreDes.Size = new System.Drawing.Size(180, 22);
             this.mAjudaSobreDes.Text = "Desenvolvedor";
+            this.mAjudaSobreDes.Click += new System.EventHandler(this.mAjudaSobreDes_Click);
             // 
             // mAjudaSobreVer
             // 
             this.mAjudaSobreVer.Name = "mAjudaSobreVer";
             this.mAjudaSobreVer.Size = new System.Drawing.Size(180, 22);
             this.mAjudaSobreVer.Text = "Versão";
+            this.mAjudaSobreVer.Click += new System.EventHandler(this.mAjudaSobreVer_Click);
             // 
             // ComboMenu
             // 
@@ -162,12 +167,14 @@
             "Português"});
             this.ComboMenu.Name = "ComboMenu";
             this.ComboMenu.Size = new System.Drawing.Size(121, 23);
+            this.ComboMenu.SelectedIndexChanged += new System.EventHandler(this.ComboMenu_SelectedIndexChanged);
             // 
             // mPesquisar
             // 
             this.mPesquisar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.mPesquisar.Name = "mPesquisar";
-            this.mPesquisar.Size = new System.Drawing.Size(100, 23);
+            this.mPesquisar.Size = new System.Drawing.Size(200, 23);
+            this.mPesquisar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mPesquisar_KeyUp);
             // 
             // FormMain
             // 
