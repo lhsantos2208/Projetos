@@ -40,6 +40,7 @@ namespace TaskConsole
             //}
             #endregion
 
+            #region Task parte 2
             //Task[] tasks =
             //{
             //    Task.Factory.StartNew(() => 
@@ -60,26 +61,54 @@ namespace TaskConsole
 
             //Task.WaitAll(tasks);
 
-            Task t1 = Task.Run(() =>
+            //Task t1 = Task.Run(() =>
+            //{
+            //    Console.WriteLine("Comando #1");
+            //});
+
+            //Task t2 = Task.Run(() =>
+            //{
+            //    Console.WriteLine("Comando #2");
+            //});
+
+            //Task t3 = Task.Run(() =>
+            //{
+            //    Console.WriteLine("Comando #3");
+            //});
+
+            //Task.WaitAll(t1, t2, t3);
+
+            //Console.WriteLine("Pricipal");
+            #endregion
+
+            #region Task parte 3
+            //Task<int> tarefa1 = Task.Factory.StartNew(() => Dobro(5));
+            //Console.WriteLine(tarefa1.Result);  
+
+            Task<int> tarefa1 = Task.Factory.StartNew(() => 
             {
-                Console.WriteLine("Comando #1");
+                return new Random().Next(10);
+                //return 5;
             });
 
-            Task t2 = Task.Run(() =>
+            Task<int> tarefa2 = tarefa1.ContinueWith((num) => 
             {
-                Console.WriteLine("Comando #2");
+                return num.Result * 2;
             });
 
-            Task t3 = Task.Run(() =>
+            Task<string> tarefa3 = tarefa2.ContinueWith((num) =>
             {
-                Console.WriteLine("Comando #3");
+                return "Valor final " + num.Result;            
             });
-
-            Task.WaitAll(t1, t2, t3);
-
-            Console.WriteLine("Pricipal");
+            Console.WriteLine(tarefa3.Result);
+            #endregion
 
             Console.ReadKey();
+        }
+
+        static int Dobro(int num)
+        {
+            return num * 2;
         }
 
         static private void Tarefa()
