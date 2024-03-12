@@ -16,5 +16,10 @@ namespace Part002
         {
             InitializeComponent();
         }
+
+        private void btnExecutar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Você clicou no botão.");
+        }
     }
 }
