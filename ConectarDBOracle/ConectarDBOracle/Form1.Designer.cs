@@ -43,7 +43,7 @@
             // lblCodigo
             // 
             lblCodigo.AutoSize = true;
-            lblCodigo.Location = new Point(28, 37);
+            lblCodigo.Location = new Point(28, 22);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(46, 15);
             lblCodigo.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(92, 29);
+            txtCodigo.Location = new Point(92, 14);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(100, 23);
             txtCodigo.TabIndex = 1;
@@ -59,7 +59,7 @@
             // lblDescricao
             // 
             lblDescricao.AutoSize = true;
-            lblDescricao.Location = new Point(28, 76);
+            lblDescricao.Location = new Point(28, 58);
             lblDescricao.Name = "lblDescricao";
             lblDescricao.Size = new Size(58, 15);
             lblDescricao.TabIndex = 2;
@@ -67,14 +67,14 @@
             // 
             // txtDescricao
             // 
-            txtDescricao.Location = new Point(92, 68);
+            txtDescricao.Location = new Point(92, 50);
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(392, 23);
             txtDescricao.TabIndex = 3;
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(130, 106);
+            btnSalvar.Location = new Point(130, 79);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
             btnSalvar.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             // btnConsultar
             // 
-            btnConsultar.Location = new Point(292, 106);
+            btnConsultar.Location = new Point(292, 79);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(75, 23);
             btnConsultar.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(211, 106);
+            btnExcluir.Location = new Point(211, 79);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(75, 23);
             btnExcluir.TabIndex = 6;
@@ -108,17 +108,17 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(28, 135);
+            dataGridView1.Location = new Point(28, 108);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(456, 364);
+            dataGridView1.Size = new Size(456, 415);
             dataGridView1.TabIndex = 7;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // btnConsultaGeral
             // 
-            btnConsultaGeral.Location = new Point(373, 106);
+            btnConsultaGeral.Location = new Point(373, 79);
             btnConsultaGeral.Name = "btnConsultaGeral";
             btnConsultaGeral.Size = new Size(111, 23);
             btnConsultaGeral.TabIndex = 8;

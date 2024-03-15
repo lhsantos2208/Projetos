@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ConectarDBOracle
 {
-    public partial class frmDbOracle : Form
+    public partial class frmDbOracle : Form //MetroFramework.Forms.MetroForm
     {
         protected OleDbConnection Con;    //conexão com o banco de dados
         protected OleDbCommand Cmd;       //executar comandos SQL
@@ -70,7 +70,7 @@ namespace ConectarDBOracle
             ConsultaGeral();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string vacodTst = dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
             txtCodigo.Text = vacodTst;
@@ -116,10 +116,14 @@ namespace ConectarDBOracle
             Dr = Cmd.ExecuteReader();
             if (Dr.Read())
             {
-                string vaSql = "DELETE USU_TTESTE " +
-                           " WHERE USU_CODTST = " + vncodTst;
-                Cmd = new OleDbCommand(vaSql, Con);
-                Cmd.ExecuteNonQuery();
+                DialogResult res = MessageBox.Show("Deseja realmente excluir o registro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    string vaSql = "DELETE USU_TTESTE " +
+                                   " WHERE USU_CODTST = " + vncodTst;
+                    Cmd = new OleDbCommand(vaSql, Con);
+                    Cmd.ExecuteNonQuery();
+                }
             }
             else
             {
@@ -146,13 +150,13 @@ namespace ConectarDBOracle
         {
             OleDbDataAdapter cmd = new OleDbDataAdapter("SELECT USU_CODTST AS CODIGO, USU_DESTST AS DESCRICAO FROM USU_TTESTE ORDER BY USU_CODTST", Con);
             DataTable dt = new DataTable();
-            cmd.Fill(dt);            
+            cmd.Fill(dt);
             dataGridView1.DataSource = dt;
         }
 
         private void frmDbOracle_FormClosed(object sender, FormClosedEventArgs e)
         {
             Con.Close();
-        }       
+        }        
     }
 }
