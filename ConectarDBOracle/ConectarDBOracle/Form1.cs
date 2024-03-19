@@ -19,7 +19,8 @@ namespace ConectarDBOracle
         }
         private void frmDbOracle_Load(object sender, EventArgs e)
         {
-            Con = new OleDbConnection("Provider=OraOLEDB.Oracle;Data Source=ODA_TESTE;USer ID=co_tortuga;Password=coteste*9)");
+            var vaconexao = Helpers.GetConnectionString();
+            Con = new OleDbConnection(vaconexao);
             Con.Open();
         }
 
@@ -157,6 +158,11 @@ namespace ConectarDBOracle
         private void frmDbOracle_FormClosed(object sender, FormClosedEventArgs e)
         {
             Con.Close();
-        }        
+        }
+
+        private void btnCrip_Click(object sender, EventArgs e)
+        {
+            Helpers.Criptografar();
+        }
     }
 }

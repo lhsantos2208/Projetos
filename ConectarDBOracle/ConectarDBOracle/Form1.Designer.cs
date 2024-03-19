@@ -37,6 +37,7 @@
             btnExcluir = new Button();
             dataGridView1 = new DataGridView();
             btnConsultaGeral = new Button();
+            btnCrip = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -126,11 +127,22 @@
             btnConsultaGeral.UseVisualStyleBackColor = true;
             btnConsultaGeral.Click += btnConsultaGeral_Click;
             // 
+            // btnCrip
+            // 
+            btnCrip.Location = new Point(28, 79);
+            btnCrip.Name = "btnCrip";
+            btnCrip.Size = new Size(75, 23);
+            btnCrip.TabIndex = 9;
+            btnCrip.Text = "Criptografar";
+            btnCrip.UseVisualStyleBackColor = true;
+            btnCrip.Click += btnCrip_Click;
+            // 
             // frmDbOracle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(511, 535);
+            Controls.Add(btnCrip);
             Controls.Add(btnConsultaGeral);
             Controls.Add(dataGridView1);
             Controls.Add(btnExcluir);
@@ -162,5 +174,6 @@
         private Button btnExcluir;
         private DataGridView dataGridView1;
         public Button btnConsultaGeral;
+        private Button btnCrip;
     }
 }
