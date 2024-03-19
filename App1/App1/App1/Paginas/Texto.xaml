@@ -3,8 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Paginas.Texto">
     <ContentPage.Content>
-        <StackLayout>
-            <Button x:Name="btnVoltar" Text="Voltar" Clicked="btnVoltar_Clicked"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label Margin="20" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue lacus eleifend eros viverra, ac tincidunt eros varius. Suspendisse sed mi finibus, rhoncus dolor at, ornare libero. In id condimentum tortor. Quisque massa justo, tristique ut magna sed, iaculis lacinia tellus. Suspendisse semper est eu leo pharetra, interdum sodales leo viverra. Quisque porttitor gravida quam, sodales efficitur neque euismod convallis. Vestibulum pellentesque, risus in sollicitudin malesuada, odio arcu dignissim neque, eget rhoncus eros lorem posuere nisi. Phasellus porta diam turpis, ut cursus orci rhoncus vel.
+&#10;Donec sit amet vulputate odio. Nulla accumsan ex interdum sem semper, id accumsan felis sodales. Sed mi sem, elementum eget ultrices laoreet, dapibus in lacus. Maecenas ac urna lacus. Vestibulum pharetra vulputate tincidunt. Ut ex massa, tincidunt ac erat a, efficitur lobortis sem. Cras tempor convallis turpis sit amet maximus. Nulla accumsan quis nunc eu viverra. Sed ante massa, condimentum sed tincidunt vitae, sollicitudin sed tortor. &#10;Pellentesque accumsan lacinia tellus ut euismod. Fusce posuere congue porttitor.
+&#10;Cras egestas enim tortor, quis elementum dolor efficitur hendrerit. Vivamus nec nisi bibendum massa mattis imperdiet. Proin suscipit sagittis neque, lacinia eleifend sapien lobortis sed. Curabitur iaculis, orci nec malesuada pharetra, lorem nisi dictum mi, non lobortis augue est non lorem. Vivamus quis elit malesuada, dignissim elit rutrum, cursus urna. Aliquam pulvinar, purus ac cursus eleifend, mauris orci viverra eros, et cursus felis nisi non tellus. Praesent ultricies ac lorem id rutrum. Pellentesque non lacinia neque. Nam magna quam, facilisis nec lacus sit amet, aliquet auctor risus. Vivamus a luctus nisi. Praesent sed molestie ligula. Morbi bibendum ac arcu at facilisis. Maecenas tempor metus sed commodo posuere. Vestibulum congue aliquam aliquet. Phasellus interdum convallis lacus vitae aliquet. Sed ullamcorper quis lorem in venenatis.
+&#10;Integer nec pretium quam. Nulla placerat ipsum mauris, sed tristique metus efficitur a. Suspendisse dolor ante, egestas vitae nunc a, ullamcorper lobortis dui. Cras gravida arcu a faucibus malesuada. Nulla facilisi. Donec porta augue non est semper, sit amet fermentum neque tempor. Duis vitae augue auctor, viverra dolor sit amet, imperdiet risus. Duis et metus blandit, sagittis orci eu, tristique eros. Aenean vitae felis metus.
+&#10;Fusce venenatis urna nunc, maximus sollicitudin purus fringilla a. Mauris vulputate nisi in nisi consectetur vulputate. Mauris tincidunt enim mi, eget tincidunt turpis finibus et. Morbi sit amet odio felis. Aliquam erat volutpat. Donec nec lorem in est sagittis dictum. Vestibulum sed fermentum neque. Nunc sed ex rhoncus, venenatis eros vel, ultrices turpis. Curabitur volutpat ante at felis mollis consequat. Maecenas quis tellus at dolor ornare convallis. Sed in hendrerit odio. Nullam tincidunt ut tortor ut hendrerit. Ut efficitur nisi ut lacus viverra, vel suscipit enim pulvinar."/>
+                <Button x:Name="btnVoltar" Text="Voltar" Clicked="btnVoltar_Clicked"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
